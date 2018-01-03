@@ -11,10 +11,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- ActiveSteps may use the camera to calculate heart rate -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
     <!-- ActiveSteps may use this to capture heart rate -->
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <!-- Used to schedule alarms -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
 
     <application
         android:name="org.sagebase.crf.MainApplication"

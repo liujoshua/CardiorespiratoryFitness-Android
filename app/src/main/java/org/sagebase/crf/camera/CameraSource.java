@@ -50,7 +50,7 @@ import java.util.Map;
 
 // Note: This requires Google Play Services 8.1 or higher, due to using indirect byte buffers for
 // storing images.
-
+// See: https://github.com/googlesamples/android-vision/blob/8b983c98016bfb23e082f9e37005fa267093ba50/visionSamples/barcode-reader/app/src/main/java/com/google/android/gms/samples/vision/barcodereader/ui/camera/CameraSource.java
 /**
  * Manages the camera in conjunction with an underlying
  * {@link com.google.android.gms.vision.Detector}.  This receives preview frames from the camera at
