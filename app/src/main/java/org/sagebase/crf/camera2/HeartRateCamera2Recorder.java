@@ -268,11 +268,14 @@ public class HeartRateCamera2Recorder extends Recorder {
     private MediaRecorder createMediaRecorder() {
         // TODO: uncomment
 //the lowest available resolution for the first back camera
-        CamcorderProfile profile = CamcorderProfile.get(CamcorderProfile.QUALITY_LOW)
+        CamcorderProfile profile = CamcorderProfile.get(CamcorderProfile.QUALITY_LOW);
         MediaRecorder mediaRecorder = new MediaRecorder();
-        mediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
 
+        mediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
+
+        mediaRecorder.setProfile(profile);
+
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
         mediaRecorder.setOutputFile(new File(getOutputDirectory(), uniqueFilename + ".mp4")
                 .getAbsolutePath());
         mediaRecorder.setVideoEncodingBitRate(10000000);
